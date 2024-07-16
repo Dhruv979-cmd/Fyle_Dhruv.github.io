@@ -1,0 +1,48 @@
+body{font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;box-sizing: border-box;}
+.photo{position:relative;height: 250px;background-position:100% 20%;background-repeat:no-repeat;background-size:cover;}       /*sm-250px ms/xl-370px*/
+
+.expert{background-color:white;cursor: pointer;}
+.expert:hover{box-shadow:5px -5px 10px rgb(214, 211, 211),-5px 5px 10px rgb(214,211,211);z-index:10;}
+
+/* Crausol css */
+.scroll-container{display:flex;flex-direction:row;height:327px;overflow-x:scroll;}
+.scroll-container::-webkit-scrollbar {    height: 12px;}
+.scroll-container::-webkit-scrollbar-thumb {    background-color: rgb(244, 67, 86);border-radius:50px;}
+.scroll-container::-webkit-scrollbar-track { border:1px solid rgb(255, 51, 102);border-radius:50px;}
+.image-container {
+    position: relative;width:220px;height:300px;background-size: cover;background-position: center;
+    flex: 0 0 auto;overflow: hidden;margin-bottom: 10px;
+}
+.overlay {
+    position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color:rgb(244, 67, 86);color: white;
+    display: flex;align-items: center;justify-content: center;opacity: 0;transition: opacity 0.5s ease;
+}
+.image-container:hover .overlay {    opacity: 1;}
+.overlay-text {    text-align: center;}
+/* crausol css */
+
+/* Contact Css */
+/* open and closse button */
+#contactFormContainer { display: none;}   
+.form__group {position: relative;margin-top:5px;margin-left:0px;}
+.form__field {font-family: inherit;width: 100%;border: none;border-bottom: 2px solid #9b9b9b;outline: 0;
+    font-size: 17px;color: #000; /* Changed from #fff to #000 for better visibility */
+    padding: 7px 5px;background: transparent;transition: border-color 0.2s;}
+.form__field::placeholder {    color: transparent;}
+.form__field:placeholder-shown ~ .form__label {font-size: 17px;cursor: text;top:10px;}
+.form__label {position: absolute;top: 0;display: block;transition: 0.2s;font-size: 17px;color: #9b9b9b;pointer-events: none;}
+.form__field:focus ~ .form__label,
+.form__field:not(:placeholder-shown) ~ .form__label {top: -20px;font-size:16px;color: #A7A7A7;}
+.form__field:required,
+.form__field:invalid {    box-shadow: none;}
+.form-check-input { width: 17px; height: 17px;border:1px solid black;}
+.form-check-input:checked { background-color: rgb(255, 51, 102);border-color: rgb(255, 51, 102);}
+.form-check-label {margin-left:10px;font-size: 18px;}
+/* Contact Css */
+
+/* media for photo */
+@media (min-width:768px) {
+    .photo {
+        height: 370px;background-position:top;background-repeat:no-repeat;background-size:cover;
+    }
+}
