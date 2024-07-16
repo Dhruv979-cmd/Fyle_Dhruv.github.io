@@ -49,7 +49,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         console.log('Work Email:', workEmail);
         console.log('First Name:', firstName);
         console.log('Last Name:', lastName);
-        alert('Form submitted successfully!');
+        console.log("Here i added Getform Api key{https://getform.io/f/brolnopa} at the last key is not given...but due to some reason if it is not working then data enterd by user is here.");
+        alert('Form submitted successfully! Here please Open Console');
     } else {
         alert('Please agree to the terms and conditions.');
     }
